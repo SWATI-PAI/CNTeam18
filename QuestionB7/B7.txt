@@ -1,0 +1,79 @@
+Question B7:
+These are the commands that we used. Also we got the output  
+
+
+Microsoft Windows [Version 10.0.17134.765]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Swati Pai>curl -k -L -o d.part https://www.dropbox.com/s/jf4wr6m075sevy5/curl_747_1_ssl.zip?dl=0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100   990    0   990    0     0    495      0 --:--:--  0:00:02 --:--:--  1408
+100 1121k  100 1121k    0     0   101k      0  0:00:11  0:00:11 --:--:--  209k
+
+C:\Users\Swati Pai>curl -k -L --range 0-114846 -o d.part1 https://www.dropbox.com/s/jf4wr6m075sevy5/curl_747_1_ssl.zip?dl=0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100   990    0   990    0     0    495      0 --:--:--  0:00:02 --:--:--  2041
+100  112k  100  112k    0     0  38282      0  0:00:03  0:00:03 --:--:--  299k
+
+C:\Users\Swati Pai>curl -k -L --range 114846-229692 -o d.part2 https://www.dropbox.com/s/jf4wr6m075sevy5/curl_747_1_ssl.zip?dl=0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100   990    0   990    0     0    495      0 --:--:--  0:00:02 --:--:-- 61875
+100  112k  100  112k    0     0  28711      0  0:00:04  0:00:04 --:--:--  143k
+
+C:\Users\Swati Pai>curl -k -L --range 229692-344538 -o d.part3 https://www.dropbox.com/s/jf4wr6m075sevy5/curl_747_1_ssl.zip?dl=0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100   990    0   990    0     0    495      0 --:--:--  0:00:02 --:--:--   495
+100  112k  100  112k    0     0  28711      0  0:00:04  0:00:04 --:--:-- 87535
+
+C:\Users\Swati Pai>curl -k -L --range 344538-459384 -o d.part4 https://www.dropbox.com/s/jf4wr6m075sevy5/curl_747_1_ssl.zip?dl=0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100   990    0   990    0     0    495      0 --:--:--  0:00:02 --:--:--  1242
+100  112k  100  112k    0     0  38282      0  0:00:03  0:00:03 --:--:--  205k
+
+C:\Users\Swati Pai>curl -k -L --range 459384- -o d.part5 https://www.dropbox.com/s/jf4wr6m075sevy5/curl_747_1_ssl.zip?dl=0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+100   990    0   990    0     0    495      0 --:--:--  0:00:02 --:--:--  1320
+100  672k  100  672k    0     0  49219      0  0:00:14  0:00:14 --:--:-- 74562
+
+C:\Users\Swati Pai>copy /b d.* dout.zip
+d.part
+d.part1
+d.part2
+d.part3
+d.part4
+d.part5
+        1 file(s) copied.
+
+C:\Users\Swati Pai>copy /b d.* dout.zip
+d.part1
+d.part2
+d.part3
+d.part4
+d.part5
+        1 file(s) copied.
+
+C:\Users\Swati Pai>curl -k -L -o d.part https://www.dropbox.com/s/jf4wr6m075sevy5/curl_747_1_ssl.zip?dl=0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+100   990    0   990    0     0    495      0 --:--:--  0:00:02 --:--:--  2538
+100 1121k  100 1121k    0     0   186k      0  0:00:06  0:00:06 --:--:--  323k

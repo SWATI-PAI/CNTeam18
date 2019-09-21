@@ -1,0 +1,3 @@
+Question B8:
+we only have to filter hhtp and the we get only the http requests.
+later in the html form url encoded we get to sniff the username and password that we had given.
